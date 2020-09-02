@@ -6,10 +6,10 @@ from sqlalchemy import create_engine
 def load_data(messages_filepath, categories_filepath):
 	'''
 	This function loads csv files into DataFrames
-	INPUT:
+	Args:
 		messages_filepath: filepath to disaster message (.csv file).
 		categories_filepath: filepath of disaster categories (.csv file).
-	OUTPUT:
+	returns:
 		df: merged DataFrame of the 2 csv files.
 		
 	'''
@@ -26,9 +26,9 @@ def load_data(messages_filepath, categories_filepath):
 def clean_data(df):
     '''
     This function cleans the DataFrame previously loaded.
-    INPUT:
+    Args:
          DataFrame.
-    OUTPUT:
+    returns:
          cleaned DataFrame.
     '''
     # CREATING A DATAFRAME OF THE 36 INDIVIDUAL CATEGORY COLUMNS
@@ -64,10 +64,10 @@ def clean_data(df):
 def save_data(df, database_filename):
     '''
     This function stores a DataFrame into a SQLLITE DataBase.
-    INPUT:
+    Args:
         df: DataFrame to be stored.
         database_filename: SQLITE DataBase name.
-    OUTPUT:
+    returns:
         /    
     '''
     # SAVING CLEANED DATASET INTO SQLITE DATABASE 
