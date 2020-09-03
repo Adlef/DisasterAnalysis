@@ -6,7 +6,8 @@ Created on Wed Sep  2 23:11:26 2020
 """
 
 import pickle
-from wrangling_scripts.DisasterMessages.train_classifier import *
+from train_classifier import *
+import numpy as np
 
 def get_feature_importance(model, category_names, database_filepath):
     '''collect important features from model and store in database
